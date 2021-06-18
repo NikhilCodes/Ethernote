@@ -1,0 +1,20 @@
+.login-root {
+  background-color: #1d202a;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  min-height: 320px;
+  width: 800px;
+  background-color: #0c0c0c;
+  border-radius: 20px;
+  box-shadow: 0 20px 20px rgba(21, 21, 21, 0.66);
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

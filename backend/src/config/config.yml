@@ -1,0 +1,14 @@
+http:
+  port: 8000
+
+db:
+  postgres:
+    db_name: ethernote_db
+    password: 123456
+    user: alpha-n1khil
+    port: 5432
+    host: localhost
+
+jwt:
+  secret: 8iasdiuahsieuy89quy28euyq8hdiahde8937qei9uas8ey873uy
+  expiry: 7d
