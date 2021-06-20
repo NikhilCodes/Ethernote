@@ -24,7 +24,7 @@ export default function AppWidget(props: AppWidgetPropType) {
         display: 'flex',
         borderRadius: 10,
         flexDirection: 'column',
-        margin: '15px',
+        margin: '10px',
         border: props.border,
       }}
     >
