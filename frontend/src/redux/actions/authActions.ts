@@ -5,7 +5,7 @@ import { getSelfUser } from '../../apis/users.api';
 
 export const authenticateUser = () => {
   return async (dispatch: Dispatch) => {
-    getSelfUser().then((user) => {
+    await getSelfUser().then((user) => {
       return dispatch({
         type: AuthActionType.AUTHENTICATE,
         payload: {

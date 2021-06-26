@@ -162,7 +162,7 @@ function AuthPage(props: any) {
                 await login(email, password);
               }
 
-              dispatch(authenticateUser())
+              await dispatch(authenticateUser());
               props.history.replace('/app');
             }}
           />
