@@ -8,6 +8,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import TypeOrmConfigService from './config/database.config';
 import { ConfigModule } from '@nestjs/config';
 import configuration from './config/configuration';
+import { ScratchModule } from './modules/scratch/scratch.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import configuration from './config/configuration';
     }),
     AuthModule,
     UsersModule,
+    ScratchModule,
   ],
   controllers: [AppController],
   providers: [AppService],
