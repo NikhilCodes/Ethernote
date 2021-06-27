@@ -8,6 +8,7 @@ import Loader from './pages/Loader';
 import './App.css';
 import { loadAuth } from './redux/actions/authActions';
 import { AuthType } from './redux/types/authTypes';
+import { loadScratchPad } from './redux/actions/scratchActions';
 
 const ProtectedRoute = ({ children, ...rest }: Partial<{ children: any, path: string }>) => {
   const auth = useSelector((state: RootState) => state.auth);
@@ -23,13 +24,15 @@ const ProtectedRoute = ({ children, ...rest }: Partial<{ children: any, path: st
 
 function App() {
   const auth = useSelector((state: RootState) => state.auth);
+  const scratch = useSelector((state: RootState) => state.scratch);
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(loadScratchPad());
     dispatch(loadAuth());
   }, []);
 
-  if (auth.isLoading) return <Loader />;
+  if (auth.isLoading || scratch.isLoading) return <Loader />;
 
   return (
     <Switch>

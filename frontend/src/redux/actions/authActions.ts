@@ -18,7 +18,6 @@ export const authenticateUser = () => {
 
 export const loadAuth = () => {
   return async (dispatch: Dispatch) => {
-
     getAuthStatus().then(async (response) => {
       const { authStatus } = response.data;
       const user = authStatus ? await getSelfUser() : {};

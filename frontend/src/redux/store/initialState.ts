@@ -6,6 +6,11 @@ const initialState = {
     isLoading: true,
     user: {},
   },
+  scratch: {
+    value: '',
+    isLoading: false,
+    error: null,
+  },
 };
 
 export default initialState;

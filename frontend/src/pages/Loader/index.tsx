@@ -6,6 +6,7 @@ export default function Loader() {
       style={{
         width: '100%',
         height: '100vh',
+        backgroundColor: '#1d202a',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

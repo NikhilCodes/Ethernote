@@ -4,8 +4,8 @@ export enum AuthType {
 }
 
 export enum AuthActionType {
-  AUTHENTICATE,
-  LOGOUT,
+  AUTHENTICATE='auth.authenticate',
+  LOGOUT='auth.logout',
 }
 
 interface AuthUser {
