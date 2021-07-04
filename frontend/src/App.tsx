@@ -28,9 +28,12 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(loadScratchPad());
     dispatch(loadAuth());
-  }, []);
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(loadScratchPad());
+  }, [auth.status, dispatch]);
 
   if (auth.isLoading || scratch.isLoading) return <Loader />;
 

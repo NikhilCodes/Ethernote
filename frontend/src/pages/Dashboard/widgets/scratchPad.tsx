@@ -32,6 +32,7 @@ export default function ScratchPad() {
         setText(event.target.value);
       }}
       value={text}
+      placeholder={'Start typing...'}
       style={{
         width: '100%',
         minHeight: 240,
